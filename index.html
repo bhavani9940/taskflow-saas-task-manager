@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+          content="Production-style SaaS Task Manager Capstone Project">
+    <title>TaskFlow - SaaS Task Manager</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header class="topbar">
+    <div class="brand">
+        <span class="logo">✓</span>
+        <span>TaskFlow</span>
+    </div>
+
+    <div class="top-actions">
+        <button id="themeButton" aria-label="Toggle dark mode">🌙</button>
+        <button id="clearButton">Clear Completed</button>
+    </div>
+</header>
+
+<div class="layout">
+
+    <aside class="sidebar">
+        <h2>TaskFlow</h2>
+
+        <nav>
+            <button class="nav-item active" data-filter="all">
+                📋 All Tasks
+            </button>
+
+            <button class="nav-item" data-filter="active">
+                ⚡ Active
+            </button>
+
+            <button class="nav-item" data-filter="completed">
+                ✅ Completed
+            </button>
+        </nav>
+
+        <div class="sidebar-info">
+            <p>Production Capstone</p>
+            <small>Responsive SaaS Task Manager</small>
+        </div>
+    </aside>
+
+    <main class="main">
+
+        <section class="hero">
+            <div>
+                <p class="eyebrow">CAPSTONE PROJECT</p>
+                <h1>Manage your work smarter.</h1>
+                <p>
+                    Create, organize and track tasks with a clean
+                    responsive productivity dashboard.
+                </p>
+            </div>
+
+            <div class="progress-box">
+                <span>Completion</span>
+                <strong id="progressText">0%</strong>
+                <div class="progress">
+                    <div id="progressBar"></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="task-form">
+
+            <input
+                type="text"
+                id="taskInput"
+                placeholder="What needs to be done?"
+                maxlength="100"
+            >
+
+            <select id="priorityInput">
+                <option value="Low">Low Priority</option>
+                <option value="Medium" selected>Medium Priority</option>
+                <option value="High">High Priority</option>
+            </select>
+
+            <button id="addButton">+ Add Task</button>
+
+        </section>
+
+        <section class="dashboard">
+
+            <div class="stat">
+                <span>Total Tasks</span>
+                <strong id="totalTasks">0</strong>
+            </div>
+
+            <div class="stat">
+                <span>Active</span>
+                <strong id="activeTasks">0</strong>
+            </div>
+
+            <div class="stat">
+                <span>Completed</span>
+                <strong id="completedTasks">0</strong>
+            </div>
+
+        </section>
+
+        <section class="tasks-section">
+
+            <div class="section-header">
+                <div>
+                    <h2>Your Tasks</h2>
+                    <p id="taskSummary">0 tasks</p>
+                </div>
+
+                <input
+                    type="search"
+                    id="searchInput"
+                    placeholder="Search tasks..."
+                >
+            </div>
+
+            <div id="taskList" class="task-list"></div>
+
+            <div id="emptyState" class="empty-state">
+                <div>📝</div>
+                <h3>No tasks found</h3>
+                <p>Create a task to get started.</p>
+            </div>
+
+        </section>
+
+    </main>
+</div>
+
+<footer>
+    <p>
+        TaskFlow • Production Capstone Project •
+        HTML5 • CSS3 • JavaScript ES6+
+    </p>
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>
